@@ -1,0 +1,204 @@
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 500;
+  // font-family: "Red Hat Display", sans-serif;
+  position: relative;
+  text-align: center;
+}
+
+.attribution {
+  width: 100%;
+  bottom: 0;
+}
+
+main {
+  background: url(./images/pattern-background-desktop.svg), $pale-blue;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  max-width: 400px;
+}
+
+.card {
+  margin: 2rem 0;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  height: fit-content;
+
+  img {
+    width: 100%;
+  }
+}
+
+.info-section {
+  display: grid;
+  padding: 1.5rem 2rem;
+  background-color: white;
+  text-align: center;
+
+  > * {
+    margin: 1rem 0;
+  }
+
+  p {
+    margin: 0 auto;
+    line-height: 1.5rem;
+    max-width: 300px;
+    color: $desaturated-blue;
+  }
+}
+
+.plan-section {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  padding: 1rem;
+  border-radius: 10px;
+  background: $very-pale-blue;
+
+  .logo {
+    transition: all 0.2s ease-in-out;
+    height: 48px;
+    width: 48px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .plan-type {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 1rem;
+
+    .plan-name {
+      font-weight: 900;
+    }
+
+    .plan-price {
+      font-weight: 700;
+      color: $desaturated-blue;
+    }
+  }
+
+  a {
+    color: $bright-blue;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+    }
+  }
+}
+
+button {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 8px;
+  background: $bright-blue;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.cancel {
+  display: block;
+  text-decoration: none;
+  color: $desaturated-blue;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    background: url(./images/pattern-background-mobile.svg), $pale-blue;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info-section {
+    h1 {
+      font-size: 27px;
+    }
+  }
+
+  .plan-section {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .info-section {
+    padding: 1.5rem 1.5rem;
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  .plan-section {
+    height: 70px;
+    font-size: 13px;
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
