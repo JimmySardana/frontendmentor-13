@@ -7,6 +7,7 @@
 
 body {
   font-weight: 500;
+  font-family: "Red Hat Display", sans-serif;
   position: relative;
   text-align: center;
 }
@@ -95,6 +96,11 @@ main {
   margin: 1rem 0;
 }
 
+.info-section h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
 .info-section p {
   margin: 0 auto;
   line-height: 1.5rem;
@@ -109,7 +115,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 75px;
+  height: 80px;
   padding: 1rem;
   border-radius: 10px;
   background: #f5f7ff;
@@ -150,7 +156,7 @@ main {
 }
 
 .plan-section .plan-type .plan-price {
-  font-weight: 700;
+  font-weight: 500;
   color: #7280a7;
 }
 
@@ -171,6 +177,8 @@ main {
 }
 
 button {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
   outline: none;
   border: none;
   width: 100%;
@@ -178,7 +186,7 @@ button {
   border-radius: 8px;
   background: #3829e0;
   color: white;
-  font-weight: 900;
+  font-weight: 700;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -221,9 +229,13 @@ button:hover {
   .plan-section {
     font-size: 15px;
   }
+  button,
+  a.cancel {
+    font-size: 15px;
+  }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
   .info-section {
     padding: 1.5rem 1.5rem;
   }
@@ -232,7 +244,7 @@ button:hover {
   }
   .plan-section {
     height: 70px;
-    font-size: 13px;
+    font-size: 12px;
   }
   .plan-section .logo {
     width: 40px;

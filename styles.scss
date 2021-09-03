@@ -12,7 +12,7 @@ $dark-blue: hsl(223, 47%, 23%);
 
 body {
   font-weight: 500;
-  // font-family: "Red Hat Display", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   position: relative;
   text-align: center;
 }
@@ -74,6 +74,11 @@ main {
     margin: 1rem 0;
   }
 
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+  }
+
   p {
     margin: 0 auto;
     line-height: 1.5rem;
@@ -85,7 +90,7 @@ main {
 .plan-section {
   display: flex;
   align-items: center;
-  height: 75px;
+  height: 80px;
   padding: 1rem;
   border-radius: 10px;
   background: $very-pale-blue;
@@ -114,7 +119,7 @@ main {
     }
 
     .plan-price {
-      font-weight: 700;
+      font-weight: 500;
       color: $desaturated-blue;
     }
   }
@@ -134,6 +139,8 @@ main {
 }
 
 button {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
   outline: none;
   border: none;
   width: 100%;
@@ -141,7 +148,7 @@ button {
   border-radius: 8px;
   background: $bright-blue;
   color: white;
-  font-weight: 900;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
@@ -183,9 +190,14 @@ button {
   .plan-section {
     font-size: 15px;
   }
+
+  button,
+  a.cancel {
+    font-size: 15px;
+  }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
   .info-section {
     padding: 1.5rem 1.5rem;
     h1 {
@@ -195,7 +207,7 @@ button {
 
   .plan-section {
     height: 70px;
-    font-size: 13px;
+    font-size: 12px;
     .logo {
       width: 40px;
       height: 40px;
