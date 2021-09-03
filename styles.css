@@ -176,7 +176,8 @@ main {
   text-decoration: none;
 }
 
-button {
+.button {
+  text-decoration: none;
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   outline: none;
@@ -192,7 +193,7 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+.button:hover {
   cursor: pointer;
   opacity: 0.7;
   -webkit-transition: all 0.2s ease-in-out;
@@ -229,7 +230,7 @@ button:hover {
   .plan-section {
     font-size: 15px;
   }
-  button,
+  .button,
   a.cancel {
     font-size: 15px;
   }
